@@ -9,6 +9,7 @@ function Outer(){
 var exec = Outer();
 exec();
 
+// =========================================================================
 
 var i;
 for (i = 0; i < 10; i++) {
@@ -17,6 +18,7 @@ for (i = 0; i < 10; i++) {
   }, 1000);
 }
 
+// =========================================================================
 
 var i;
 for (i = 0; i < 10; i++) {
@@ -27,6 +29,7 @@ for (i = 0; i < 10; i++) {
     }(i));
 }
 
+// =========================================================================
 
 var arr = []
  
@@ -41,3 +44,21 @@ for(var i = 0; i < 5; i++){
 for(var index in arr) {
     arr[index];
 }
+
+// =========================================================================
+
+function factory_movie(title){
+    return {
+        getTitle : function(){
+            return title;
+        },
+        setTitle : function(_title){
+            title = _title;
+        }
+    }
+}
+
+var ghost = factory_movie();
+
+ghost.setTitle('test');
+console.log(ghost.getTitle())

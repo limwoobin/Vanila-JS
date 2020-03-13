@@ -1,23 +1,14 @@
-function Person(){
+var a = {
+    attr1 : 1
+}
+
+function ghost(){
 
 }
 
-Person.prototype.zazi = '5cm';
-Person.prototype.size = 'small';
+ghost.prototype = a;
 
+var b = new ghost();
 
-var man1 = new Person();
-var man2 = new Person();
-
-console.log(man1.zazi);
-
-console.log(man1.__proto__);
-console.log(Person.prototype);
-console.log(Person.prototype.constructor);
-console.log(Person);
-
-
-var obj = {
-
-}
-console.log(obj);
+console.log(b.__proto__);
+console.log(b.attr1);

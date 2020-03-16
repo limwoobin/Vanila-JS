@@ -1,14 +1,9 @@
+console.log(this);
+
 var a = {
-    attr1 : 1
+    t : function(){
+        console.log(this);
+    }
 }
 
-function ghost(){
-
-}
-
-ghost.prototype = a;
-
-var b = new ghost();
-
-console.log(b.__proto__);
-console.log(b.attr1);
+a.t();
